@@ -3,8 +3,10 @@ package com.unwiringapps.dsdtshayariappadminpanel.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.firestore.FirebaseFirestore
 
 import com.unwiringapps.dilsedimagtak_shayariapp.Model.ShayariModel
 
@@ -16,9 +18,12 @@ import com.unwiringapps.dsdtshayariappadminpanel.databinding.ItemShayariBinding
 
 class AllShayariAdapter(
     val allShayariActivity: AllShayariActivity,
-    val shayarilistrr: ArrayList<ShayariModel>
+    val shayarilistrr: ArrayList<ShayariModel>,
+    val catid: String
 ) : RecyclerView.Adapter<AllShayariAdapter.ShayariViewHolder>() {
 
+
+    val db = FirebaseFirestore.getInstance()
 
     class ShayariViewHolder(val binding: ItemShayariBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -55,8 +60,14 @@ class AllShayariAdapter(
         }
 
 
+        holder.binding.btnDelete.setOnClickListener {
 
+            db.collection("tanmayshayari").document(catid).collection("all")
+                .document(shayarilistrr[position].id!!).delete().addOnSuccessListener {
+                    Toast.makeText(allShayariActivity,"Shayari Deleted Succesfully",Toast.LENGTH_LONG).show()
+                }
 
+        }
 
 
     }

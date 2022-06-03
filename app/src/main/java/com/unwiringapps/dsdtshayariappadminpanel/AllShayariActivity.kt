@@ -1,14 +1,20 @@
 package com.unwiringapps.dsdtshayariappadminpanel
 
+import android.app.Dialog
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
+import com.unwiringapps.dilsedimagtak_shayariapp.Model.CatModel
 import com.unwiringapps.dilsedimagtak_shayariapp.Model.ShayariModel
 import com.unwiringapps.dsdtshayariappadminpanel.adapter.AllShayariAdapter
 
 import com.unwiringapps.dsdtshayariappadminpanel.databinding.ActivityAllShayariBinding
+import com.unwiringapps.dsdtshayariappadminpanel.databinding.DialogAddCatBinding
+import com.unwiringapps.dsdtshayariappadminpanel.databinding.DialogAddShayariBinding
 
 class AllShayariActivity : AppCompatActivity() {
 
@@ -37,28 +43,65 @@ class AllShayariActivity : AppCompatActivity() {
         val id = intent.getStringExtra("id")
 
 
-        binding.catText1.text = name.toString()
+//        binding.catText1.text = name.toString()
 
-        binding.btnBack.setOnClickListener {
-            onBackPressed()
-        }
+//        binding.btnBack.setOnClickListener {
+//            onBackPressed()
+//        }
 
 
         db = FirebaseFirestore.getInstance()
 
-        db.collection("tanmayshayari").document(id!!).collection("all").addSnapshotListener { value, error ->
+        db.collection("tanmayshayari").document(id!!).collection("all")
+            .addSnapshotListener { value, error ->
 
-            val shayarilistrr  = arrayListOf<ShayariModel>()
-            val shayaridatarr = value?.toObjects(ShayariModel::class.java)
-            shayarilistrr.addAll(shayaridatarr!!)
+                val shayarilistrr = arrayListOf<ShayariModel>()
+                val shayaridatarr = value?.toObjects(ShayariModel::class.java)
+                shayarilistrr.addAll(shayaridatarr!!)
 
 
-            binding.rcvallS.layoutManager = LinearLayoutManager(this)
-            binding.rcvallS.adapter = AllShayariAdapter(this, shayarilistrr)
+                binding.rcvAllShayari.layoutManager = LinearLayoutManager(this)
+                binding.rcvAllShayari.adapter = AllShayariAdapter(this, shayarilistrr, id)
+            }
+
+
+        binding.toolbarTitle.text = name.toString()
+
+
+        binding.btnAddShayari.setOnClickListener {
+            val addCatDialog = Dialog(this@AllShayariActivity)
+            val binding = DialogAddShayariBinding.inflate(layoutInflater)
+//            addCatDialog.setContentView(R.layout.dialog_add_cat)
+            addCatDialog.setContentView(binding.root)
+
+            if (addCatDialog.window != null)              // TO MAKE DIALOG CORNERS CURLY
+            {
+                addCatDialog.window!!.setBackgroundDrawable(ColorDrawable(0))  // TO MAKE DIALOG CORNERS CURLY
+            }
+
+
+            binding.dialogBtnshaay.setOnClickListener {
+
+                val uid = db.collection("tanmayshayari").document().id
+                val edtShayariget = binding.dialogShayari.text.toString()
+
+                val finalValue = ShayariModel(uid, edtShayariget)
+
+                db.collection("tanmayshayari").document(id).collection("all").document(uid)
+                    .set(finalValue).addOnCompleteListener {
+                        if (it.isSuccessful) {
+                            addCatDialog.dismiss()
+                            Toast.makeText(this@AllShayariActivity, "Shayari Added Succesfully",Toast.LENGTH_LONG).show()
+                        }
+                    }
+
+
+            }
+
+            addCatDialog.show()
+
+
         }
-
-
-
 
     }
 
