@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="6dp"
+        app:cardCornerRadius="40dp"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ituu1">
+
+            <TextView
+                android:id="@+id/itemShayari"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:fontFamily="sans-serif-black"
+                android:text="ख़्वाहिश-ए ज़िंदगी बस इतनी सी  है अब हमारी,
+की तेरा साथ हो और ज़िन्दगी कभी ख़त्म न हो। "
+                android:textColor="@color/black"
+                android:textSize="24dp" />
+
+            <ImageView
+                android:id="@+id/btnDelete"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignEnd="@id/itemShayari"
+                android:layout_alignBottom="@id/itemShayari"
+                android:backgroundTint="@color/black"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/ic_baseline_delete_forever_24"/>
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

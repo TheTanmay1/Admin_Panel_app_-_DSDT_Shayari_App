@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/03)androidstudioprojects28may2022kotlinonly/03)dsdt_shayariapp_admin_panel/app/src/main/res/drawable/add_cat_button.xml" value="0.1575" />
+        <entry key="..\:/03)androidstudioprojects28may2022kotlinonly/03)dsdt_shayariapp_admin_panel/app/src/main/res/drawable/edt_txt.xml" value="0.1575" />
+        <entry key="..\:/03)androidstudioprojects28may2022kotlinonly/03)dsdt_shayariapp_admin_panel/app/src/main/res/drawable/gradient_1.xml" value="0.1575" />
+        <entry key="..\:/03)androidstudioprojects28may2022kotlinonly/03)dsdt_shayariapp_admin_panel/app/src/main/res/layout/activity_all_shayari.xml" value="0.25833333333333336" />
+        <entry key="..\:/03)androidstudioprojects28may2022kotlinonly/03)dsdt_shayariapp_admin_panel/app/src/main/res/layout/activity_main.xml" value="0.25833333333333336" />
+        <entry key="..\:/03)androidstudioprojects28may2022kotlinonly/03)dsdt_shayariapp_admin_panel/app/src/main/res/layout/dialog_add_cat.xml" value="0.25833333333333336" />
+        <entry key="..\:/03)androidstudioprojects28may2022kotlinonly/03)dsdt_shayariapp_admin_panel/app/src/main/res/layout/item_cat.xml" value="0.25833333333333336" />
+        <entry key="..\:/03)androidstudioprojects28may2022kotlinonly/03)dsdt_shayariapp_admin_panel/app/src/main/res/layout/item_shayari.xml" value="0.25833333333333336" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

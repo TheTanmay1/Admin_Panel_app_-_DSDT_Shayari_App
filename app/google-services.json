@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "932036686357",
+    "project_id": "dil-se-dimag-tak---shayari-app",
+    "storage_bucket": "dil-se-dimag-tak---shayari-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932036686357:android:f42b5aaf61568ff8ad541c",
+        "android_client_info": {
+          "package_name": "com.unwiringapps.dilsedimagtak_shayariapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932036686357-1dmpm3n98fsi7pto4194ombb48brbce8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXdcbFlj62f256xvbaSRd4UYI7172VrC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932036686357-1dmpm3n98fsi7pto4194ombb48brbce8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932036686357:android:09f88e67d8f5846bad541c",
+        "android_client_info": {
+          "package_name": "com.unwiringapps.dsdtshayariappadminpanel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932036686357-1dmpm3n98fsi7pto4194ombb48brbce8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXdcbFlj62f256xvbaSRd4UYI7172VrC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932036686357-1dmpm3n98fsi7pto4194ombb48brbce8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

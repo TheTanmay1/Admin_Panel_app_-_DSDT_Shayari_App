@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:id="@+id/rcvCard"
+        android:layout_margin="12dp"
+        android:layout_marginEnd="5dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        app:cardCornerRadius="180dp">
+
+
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="Hey Nacch be"
+    android:id="@+id/item_txt"
+    android:textSize="35sp"
+    android:layout_gravity="center"
+    android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:backgroundTint="@color/black"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="end|center"
+            android:background="@drawable/ic_baseline_delete_forever_24"/>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
